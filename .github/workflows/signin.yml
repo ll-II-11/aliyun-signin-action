@@ -10,14 +10,14 @@
      name: Aliyun Signin
      runs-on: ubuntu-latest
      steps:
-       - uses: ImYrS/aliyun-auto-signin@v1.3.2
+       - uses: ImYrS/aliyun-auto-signin@main
          with:
-           REFRESH_TOKENS: ${{ 1ef3897c475e45e991b97fcfd152b927 }}
+           REFRESH_TOKENS: ${{ secrets.REFRESH_TOKENS }}
            PUSH_TYPES: 'telegram,smtp'
-           SERVERCHAN_SEND_KEY: ${{ SCT124157TXVHQuTKbG3sIgBVPaFeQNN36 }}
+           SERVERCHAN_SEND_KEY: ${{ secrets.SERVERCHAN_SEND_KEY }}
            TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
            TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-           PUSHPLUS_TOKEN: ${{ 1eca33b6b9c54afb9971fc76b37a782e }}
+           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
            SMTP_HOST: ${{ secrets.SMTP_HOST }}
            SMTP_PORT: ${{ secrets.SMTP_PORT }}
            SMTP_TLS: ${{ secrets.SMTP_TLS }}
